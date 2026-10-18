@@ -1,0 +1,27 @@
+name: repobox
+
+on:
+  push:
+    branches: [main]
+    paths: ['inbox/*.json']
+  workflow_dispatch:
+    inputs:
+      url:
+        description: GitHub repo URL to (re)analyze; empty = process inbox
+        required: false
+        default: ''
+
+concurrency:
+  group: repobox
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  repobox:
+    uses: cholateio/repobox/.github/workflows/analyze.yml@b39a6f7a2f715066f05483c9a4a9e0243424553f
+    with:
+      url: ${{ inputs.url }}
+    secrets:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
