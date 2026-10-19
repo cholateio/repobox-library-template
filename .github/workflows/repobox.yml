@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   repobox:
-    uses: cholateio/repobox/.github/workflows/analyze.yml@b39a6f7a2f715066f05483c9a4a9e0243424553f
+    uses: cholateio/repobox/.github/workflows/analyze.yml@640cb197c11ddf47932e4f51bfede08741883eb4
     with:
       url: ${{ inputs.url }}
     secrets:
