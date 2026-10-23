@@ -1,6 +1,6 @@
 # RepoBox 收藏庫範本
 
-[English](#english) | **繁體中文**
+**繁體中文** | [English](#english)
 
 這是 [RepoBox](https://github.com/cholateio/repobox) 的收藏庫範本。
 
